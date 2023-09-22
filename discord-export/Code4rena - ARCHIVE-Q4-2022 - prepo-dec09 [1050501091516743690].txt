@@ -1,0 +1,588 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q4-2022 / prepo-dec09
+==============================================================
+
+[12/08/2022 20:04] kartoonjoy (pinned)
+👋 Hello and welcome to the contest channel for the $36,500 USDC **prePO** contest!
+
+📆 Contest opens 12/09/2022 20:00 (20:00 UTC) and runs through 12/12/2022 20:00 (20:00 UTC) (3 days).
+
+Please give a warm welcome to the prePO team, particularly @mlohc137, who will be available for questions either here in the channel or via DM.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, consider enabling notifications for this channel. 🐺 ⏰
+
+Contest Page: https://code4rena.com/contests/2022-12-prepo-contest
+
+{Embed}
+https://code4rena.com/contests/2022-12-prepo-contest
+Code4rena prePO contest
+$36,500 USDC
+9 December 2022—12 December 2022
+Code4rena - ARCHIVE-Q4-2022 - prepo-dec09 [1050501091516743690].txt_Files/C4-banner-7C19B.png
+
+{Reactions}
+firee (13) prePOglasses (7) 
+
+[12/09/2022 09:43] codingnamekiki
+:PU_peepoHappyWave:
+
+{Reactions}
+👀 (3) 👋 (3) 
+
+[12/09/2022 11:34] supernovahs
+Hiii
+
+{Reactions}
+👋 
+
+[12/09/2022 18:57] chaduke#3730
+36500 good number
+
+{Reactions}
+pepeyeaa 
+
+[12/09/2022 19:19] ladboy233
+👀
+
+{Reactions}
+👋 
+
+[12/09/2022 19:20] kartoonjoy
+Pinned a message.
+
+
+[12/09/2022 19:59] chaduke#3730
+who is on this project?
+
+
+[12/09/2022 20:08] prexavier
+Hey wardens, Xavier here, founder of prePO
+Thanks for helping make our project secure! 💪
+
+Feel free to ask here with any questions you might have, or dm @mlohc137 if the questions need to be private
+
+All wardens with valid findings will also be able to claim a commemorative soulbound NFT via Galxe as an extra thanks 🏆
+
+{Reactions}
+🔥 (8) 👍 
+
+[12/09/2022 20:25] itsmetechjay
+We are aware that the contest page may be showing incorrectly. Please go directly to the repo in the meantime: https://github.com/code-423n4/2022-12-prepo
+
+{Embed}
+https://github.com/code-423n4/2022-12-prepo
+GitHub - code-423n4/2022-12-prepo
+Contribute to code-423n4/2022-12-prepo development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2022 - prepo-dec09 [1050501091516743690].txt_Files/cee3c1e8-b7e2-48c9-a4af-90c280001916-C6845
+
+{Reactions}
+🫡 (3) 
+
+[12/09/2022 21:15] thepicodes (pinned)
+**Automated Findings:** https://gist.github.com/Picodes/5221065a8bbe322678c9acdcdbcca4ff
+
+
+[12/09/2022 21:16] itsmetechjay (pinned)
+Wardens, please note that c4udit output has been posted above and added to pinned posts. These are considered publicly known issues and are not eligible for awards.
+
+**Automated findings: **
+https://gist.github.com/Picodes/5221065a8bbe322678c9acdcdbcca4ff
+
+This will also be linked in the contest README file shortly.
+
+
+[12/09/2022 21:16] itsmetechjay
+Pinned a message.
+
+
+[12/09/2022 21:16] itsmetechjay
+Pinned a message.
+
+
+[12/09/2022 22:54] koolexc
+The market valuation and payouts equations are interesting!
+
+{Reactions}
+🧐 
+
+[12/09/2022 23:20] ladboy233
+https://docs.prepo.io/4
+
+
+[12/09/2022 23:20] ladboy233
+Is this the documentation for the contract/
+
+
+[12/09/2022 23:20] ladboy233
+?
+
+
+[12/09/2022 23:42] mlohc137
+Ah no, documentation about the core product on our website is out-of-date. The architecture has significantly changed since we wrote that documentation for our first audit in March.
+
+
+[12/09/2022 23:43] mlohc137
+I have prepared a sort of bird's eye view of the major components in the README, and also the majority of our documentation is within our interfaces
+
+
+[12/09/2022 23:43] ladboy233
+ok thanks.
+
+
+[12/09/2022 23:43] ladboy233
+Yeap the interface.
+
+
+[12/09/2022 23:43] ladboy233
+👀
+
+
+[12/10/2022 01:22] ladboy233
+@mlohc137 Can I please DM you?
+
+
+[12/10/2022 01:51] 0xdeadbeef0x
+@mlohc137 Same here, seems only you can add as a friend in order to DM
+
+
+[12/10/2022 01:58] ladboy233
+D:\Security\prepo-monorepo\apps\smart-contracts\core> npx hardhat test
+
+
+[12/10/2022 01:58] ladboy233
+you know how long it takes to run the full test for me?????
+
+
+[12/10/2022 01:58] ladboy233
+26 minutes!!!!!!!!!!!!
+
+
+[12/10/2022 02:15] 0xdeadbeef0x
+It means you got 146 tests left to run until the end of the contest 😄
+
+{Reactions}
+🤣 
+
+[12/10/2022 02:56] ladboy233
+😂😂😂
+
+
+[12/10/2022 06:30] KingNFT#8007
+Can we submit working foundry testcases as PoC?
+
+
+[12/10/2022 06:31] KingNFT#8007
+hardhat is too slow
+
+
+[12/10/2022 06:45] Parth#7949
+```js
+function send(address recipient, uint256 unconvertedAmount) external override onlyAllowedMsgSenders {
+    uint256 scaledPrice = (_price.get() * _priceMultiplier) / MULTIPLIER_DENOMINATOR;     if (scaledPrice <= _scaledPriceLowerBound) return;
+    uint256 outputAmount = (unconvertedAmount * _outputTokenDecimalsFactor) / scaledPrice;
+    if (outputAmount == 0) return;
+    if (outputAmount > _outputToken.balanceOf(address(this))) return;
+    _outputToken.transfer(recipient, outputAmount);
+  }
+```
+
+Can anyone explain what does the first 3 line of above function does?
+
+
+[12/10/2022 07:08] ne0n239
+@mlohc137 can you please add me as a friend so that I can DM u?
+
+
+[12/10/2022 08:10] mlohc137
+I've accepted all requests and also opened DMs up!
+
+
+[12/10/2022 08:11] mlohc137
+I think this is fine, since testing framework shouldn't intefere with a concept being demonstrated
+
+
+[12/10/2022 08:12] mlohc137
+So this is going to be used to issue `PPO` tokens to reimburse users who are charged fees for using our platform. This scaling multiplier is a way for us to alter the amount being sent without altering the price oracle.
+
+The price oracle is needed because the fee is going to be in some other token amount (`USDC` most likely) and needs the price to determine the conversion rate for how much `PPO` token to issue for reimbursement of the fee.
+
+
+[12/10/2022 08:43] KingNFT#8007
+Is there an oracle example, can we treat it as a typical chain link oracle reporting PPO/USD price with 8 decimals such as 123456789 representing $1.23456789 per PPO token
+
+
+[12/10/2022 09:13] ahmet5611
+@mlohc137 dmed
+
+
+[12/10/2022 09:42] koolexc
+is the documentation out of date for the general concept of the product  as well or is it only for the architecture?
+
+
+[12/10/2022 11:21] road220
+@0xdeadbeef0x , any chance to dm you?
+
+
+[12/10/2022 11:26] koolexc
+@mlohc137 can I dm you?
+
+
+[12/10/2022 11:40] prexavier
+it could be any arbitrary price, e.g. fixed or dynamic. we are using FixedUintValue.sol initially
+
+
+[12/10/2022 11:40] prexavier
+general concept is the same, but for the latest code + architecture see the readme / documentation in interfaces
+
+
+[12/10/2022 11:41] koolexc
+Thanks!
+
+{Reactions}
+blobsalute 
+
+[12/10/2022 11:41] koolexc
+can I dm you for a question?
+
+
+[12/10/2022 11:41] prexavier
+sure
+
+
+[12/10/2022 11:44] prexavier
+all the current tests pass, so for speed purposes if you're trying to test a specific behaviour probably best to only test on a specific test file + comment out all tests except the ones that are relevant for you (including any you write yourself)
+
+
+[12/10/2022 11:55] Parth#7949
+@Xavier | prePO 🔮 what is long token and short token?
+
+
+[12/10/2022 12:00] Parth#7949
+What is the significance of `Deposit`, `Withdraw` and `ManagerWithdraw` in collateral token when there is `mint` and `redeem` functionality in `PrePOMarket`? Can you explain how both of these pieces fit together?
+
+
+[12/10/2022 12:45] prexavier
+check out https://docs.prepo.io/concepts/markets
+
+{Embed}
+https://docs.prepo.io/concepts/markets
+Markets 🏦 | prePO Docs
+Overview
+
+
+[12/10/2022 12:46] prexavier
+they first deposit to get Collateral tokens, then these Collateral tokens are used to mint Long+Short tokens
+
+
+[12/10/2022 13:51] koolexc
+@Xavier | prePO 🔮 
+Could you please explain what's the use of NFTScoreRequirement in a real world scenario?
+
+
+[12/10/2022 14:08] Parth#7949
+Is there any detailed explanation/docs/blogs/videos of what this is trying to achieve? Am not able to visualize bigger picture
+
+
+[12/10/2022 14:11] prexavier
+e.g. if you own certain nfts w/ enough total score, you can access a guarded launch of the platform
+
+
+[12/10/2022 14:12] prexavier
+for bigger picture you can read the rest of the docs
+
+
+[12/10/2022 15:17] aviggiano
+hello
+can someone point me to the documentation explaining how `NFTScoreRequirement` is used?
+
+
+[12/10/2022 15:33] supernovahs
+@Xavier | prePO 🔮 dmed
+
+
+[12/10/2022 18:08] trustminimised
+@Xavier | prePO 🔮 What type of account typically holds the various roles defined in the contracts?
+
+
+[12/10/2022 18:23] prexavier
+Most likely a governance multisig
+
+
+[12/10/2022 18:24] trustminimised
+But not necessarily?
+
+
+[12/10/2022 18:43] prexavier
+Could also be a contract etc. Can assume the role holders are secure/trustworthy
+
+
+[12/11/2022 00:28] aviggiano
+Started a thread.
+
+
+[12/11/2022 01:27] _oceansky
+anyone from team Prepo? available?
+
+
+[12/11/2022 02:31] prexavier
+You can ask here or dm @mlohc137 or me!
+
+
+[12/11/2022 03:52] eyexploit
+dmed you
+
+{Reactions}
+👍 (2) 
+
+[12/11/2022 10:25] 0x1f8b
+`AccountList.sol` is under scope? Not included in any section and it was in a folder where all the contrats are scoped, but this file seems forgotten
+
+
+[12/11/2022 11:42] prexavier
+i believe it was already audited in a previous audit, that's why
+
+{Reactions}
+👍 
+
+[12/11/2022 15:15] 0xbtk
+@Xavier | prePO 🔮 Dmed
+
+
+[12/11/2022 21:17] tourist2824
+@Xavier | prePO 🔮 dmed you
+
+
+[12/12/2022 04:10] _oceansky
+@Xavier | prePO 🔮 dmed thanks
+
+{Reactions}
+👌🏻 
+
+[12/12/2022 04:18] prexavier
+please dm @mlohc137 instead going forward!
+
+
+[12/12/2022 06:58] supernovahs
+@mlohc137 dmed
+
+
+[12/12/2022 12:11] tourist2824
+@mlohc137 dmed
+
+
+[12/12/2022 14:46] koolexc
+@mlohc137 DMed
+
+
+[12/12/2022 16:47] mlohc137
+I am getting a lot of questions about the nature of NFTs being used as criteria for `NFTScoreRequirement`, so going to leave the answer here for everyone. We will be using soulbound Galxe NFTs that are issued by PrePO for past participation in various promotional programs and token sales.
+
+
+[12/12/2022 20:02] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens The **prePO** contest is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a gardener if you have questions along the way!
+
+
+[12/12/2022 20:02] un_for_given
+I wanted to send a report in the last minute but It said the contest is finished 😦
+
+{Reactions}
+⏰ (5) 
+
+[12/12/2022 20:05] 0xtraub
+Good luck everyone
+
+
+[12/12/2022 20:15] ladboy233
+I did not have time to submit a single report for this one
+
+
+[12/12/2022 20:20] 0xtraub
+I got lucky and submitted my first report w a medium so I'm happy
+
+{Reactions}
+🎉 
+
+[12/12/2022 20:40] ladboy233
+👆🥲
+
+
+[12/12/2022 23:02] chaduke#3730
+I tried hard on this one
+
+
+[12/12/2022 23:02] chaduke#3730
+and hope to make a difference
+
+
+[12/12/2022 23:06] 0xdeadbeef0x
+Good luck! Thanks for the clear responses to questions.
+
+
+[12/13/2022 00:25] mlohc137
+No problem, thanks to everyone who participated!
+
+
+[12/13/2022 04:39] rocketmountain
+me too . My internet connection was disturbing
+
+
+[12/13/2022 06:02] supernovahs
+I could not find any
+
+
+[12/14/2022 18:51] liveactionllamac4
+Hi @Arefin, @supernova, & @0xTraub! 👋 Please wait until after the report is public to discuss findings or potential severities. TY!
+
+
+[12/14/2022 20:01] 0xtraub
+my bad. will do
+
+{Reactions}
+hi5 (3) thankyou (2) 
+
+[01/19/2023 20:57] un_for_given
+https://github.com/code-423n4/code423n4.com/pull/6898/files
+
+{Embed}
+https://github.com/code-423n4/code423n4.com/pull/6898/files
+Update Leaderboard by liveactionllama · Pull Request #6898 · code-4...
+Code4rena - ARCHIVE-Q4-2022 - prepo-dec09 [1050501091516743690].txt_Files/98446738-1A1F9
+
+{Reactions}
+👍 (2) 
+
+[01/20/2023 02:13] chaduke#3730
+congrats to all!
+
+{Reactions}
+👀 (3) 🎉 
+
+[01/20/2023 08:38] .ash_hunter
+congrats to you.also man i got my first bounty from code4rena😇
+
+{Reactions}
+hi5 (2) 🎉 
+
+[01/20/2023 12:28] supernovahs
+Awards our out?
+
+
+[01/20/2023 16:39] .ash_hunter
+yeah man
+
+
+[01/20/2023 16:39] .ash_hunter
+go and check in this
+
+
+[01/20/2023 17:16] cloudellie
+These PRs are not official until they're merged. We'll post an announcement here in this channel (and in #📢announcements ) when we have finalized awards. And there will also be a post in #📢announcements when awards are sent. /cc @supernova
+
+{Reactions}
+thankyou 
+
+[01/20/2023 18:26] itsmetechjay
+:C4Keycap:  💸 🎉 Awards for **prePO**:
+
+$3,864.69 USDC » @csanuragjain 
+$3,783.72 USDC » @0xdeadbeef0x 
+$2,397.43 USDC » @zaskoh 
+$1,932.93 USDC » @rvierdiiev 
+$1,803.53 USDC » @unforgiven 
+$1,354.05 USDC » @deliriusz 
+$1,273.08 USDC » @Tricko 
+$1,239.23 USDC » @Trust 
+$953.20 USDC » @hansfriese 
+$840.62 USDC » @0xSmartContract 
+$794.07 USDC » @cccz 
+$721.75 USDC » @RaymondFam 
+$583.62 USDC » @0xTraub 
+$583.62 USDC » UdarTeam (@ahmedov, @tourist)
+$530.45 USDC » @ak1 
+$524.62 USDC » @trustminimised 
+$454.91 USDC » @chaduke 
+$449.08 USDC » @joestakey 
+$423.17 USDC » @ReyAdmirado 
+$421.28 USDC » @Rolezn 
+$401.74 USDC » @fs0c 
+$401.74 USDC » @imare 
+$287.26 USDC » @Koolex 
+$249.09 USDC » SmartSek (@hake | SmartSek, @Django | Saloon Finance)
+$249.09 USDC » @idkwhatimdoing 
+$246.02 USDC » @pavankv 
+$238.90 USDC » @Parth 
+$238.90 USDC » @0Kage 
+$220.97 USDC » @KingNFT 
+$220.97 USDC » @haku 
+$220.97 USDC » @adriro 
+$210.78 USDC » @aviggiano 
+$210.78 USDC » @mert_eren 
+$210.78 USDC » @bin2chen 
+$210.78 USDC » @ayeslick 
+$96.82 USDC » @obront 
+$80.97 USDC » @wait 
+$53.17 USDC » @Englave 
+$53.17 USDC » @Mukund 
+$53.17 USDC » @gz627 
+$53.17 USDC » @code-cipher 
+$52.84 USDC » @hihen 
+$52.84 USDC » @8olidity 
+$52.84 USDC » @HE1M 
+$52.84 USDC » @Madalad 
+$28.12 USDC » @0xhacksmithh 
+$28.12 USDC » @Bnke 
+$28.12 USDC » oyc_109
+$28.12 USDC » @Tointer 
+$28.12 USDC » @shark 
+$28.12 USDC » @Awesome 
+$28.12 USDC » Janio
+$28.12 USDC » @0xAgro 
+$28.12 USDC » @izhelyazkov 
+$28.12 USDC » @neumo 
+$28.12 USDC » @!0xcaventa 
+$28.12 USDC » @0xNazgul 
+$28.12 USDC » @yongskiws 
+$28.12 USDC » @Udsen 
+$28.12 USDC » @0x52 
+$28.12 USDC » @Zarf 
+$25.05 USDC » @Sathish9098 
+$25.05 USDC » @saneryee 
+$25.05 USDC » @nadin 
+$25.05 USDC » @martin11 
+$25.05 USDC » @Tomio 
+$25.05 USDC » @RHaO-sec 
+$25.05 USDC » @dharma09 
+$25.05 USDC » @rjs 
+
+🏁 Findings summary
+---------------------------
+High risk findings: 18 total, 2 unique
+Med risk findings: 37 total, 7 unique
+Gas findings: 20
+QA findings: 37
+
+Awards will be distributed on Polygon within the next 1-2 weeks. Congratulations, everyone! 💸 💸 💸
+
+*If you participated in this contest and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+--
+
+ℹ️ Note: As an awardee of the prePO contest, you are eligible to claim the warden soulbound NFT. Details here: https://galxe.com/prePO/campaign/GCXhbUwvYs
+
+{Embed}
+https://galxe.com/prePO/campaign/GCXhbUwvYs
+Code4rena Warden (Dec 2022) by prePO
+Join Code4rena Warden (Dec 2022) NFT campaigns created by prePO on Galxe. Submit any valid finding as a warden in prePO's au
+Code4rena - ARCHIVE-Q4-2022 - prepo-dec09 [1050501091516743690].txt_Files/1670425707594560374_thumbnail-D578F.webp
+
+{Reactions}
+hi5 (12) 🔥 (8) 🎉 (6) prepo (4) bolt_discord_emoji (3) 
+
+==============================================================
+Exported 97 message(s)
+==============================================================
